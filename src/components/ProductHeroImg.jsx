@@ -4,7 +4,7 @@ function ProductHeroImg() {
   return (
     <>
       <section class="inventory-background">
-        <img src="../images/inventorybackground.png" alt=""></img>
+        <img src="./images/inventorybackground.webp" alt=""></img>
         <div class="content">
           <h1>Inventory</h1>
         </div>
