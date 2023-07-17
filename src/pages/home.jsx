@@ -12,7 +12,7 @@ function Home() {
       {/* <!--=================== Hero section ============--> */}
       <section className="container">
         <video autoPlay loop muted className="hero-video">
-          <source src="./images/myMovie.mp4" type="video/mp4" />
+          <source src="./src/images/myMovie.mp4" type="video/mp4" />
         </video>
         <div className="content">
           <h1>Velocity Motors</h1>
