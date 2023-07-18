@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/filter.css";
 
 const CarFilter = ({ cars, setFilteredCars }) => {
   const [makeFilter, setMakeFilter] = useState("");
@@ -15,14 +16,17 @@ const CarFilter = ({ cars, setFilteredCars }) => {
   };
 
   return (
-    <div>
+    <div className="filters">
       <input
         type="text"
+        className="inputEmail"
         placeholder="Filter by make"
         value={makeFilter}
         onChange={handleMakeFilterChange}
       />
-      <button onClick={handleFilterClick}>Filter</button>
+      <button className="product-btn" onClick={handleFilterClick}>
+        Filter
+      </button>
     </div>
   );
 };

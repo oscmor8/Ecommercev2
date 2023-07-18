@@ -1,6 +1,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
+const validator = require("validator"); // Import the validator library
 
 const app = express();
 app.use(cors());
@@ -23,6 +24,17 @@ db.connect((error) => {
 
 app.post("/submit", (req, res) => {
   const { firstName, lastName, email, number, message } = req.body;
+
+  // Perform additional server-side validation here
+  if (!firstName || !lastName || !email || !number || !message) {
+    return res.status(400).json({ error: "All fields are required." });
+  }
+
+  if (!validator.isEmail(email)) {
+    return res
+      .status(400)
+      .json({ error: "Please enter a valid email address." });
+  }
 
   const sql =
     "INSERT INTO contact (first_name, last_name, email, number, message) VALUES (?, ?, ?, ?, ?)";

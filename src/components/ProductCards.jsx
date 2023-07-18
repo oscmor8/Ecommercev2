@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import "../styles/productcards.css";
 
 const ProductsDb = ({ cars }) => {
@@ -19,6 +18,8 @@ const ProductsDb = ({ cars }) => {
             <button className="btn-products btn1">Add to cart</button>
           </div>
         ))}
+        {/* Add empty divs to maintain the same size for all cards */}
+        {cars.length === 0 && <div className="product empty"></div>}
       </section>
     </>
   );

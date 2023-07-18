@@ -16,6 +16,8 @@
 }
 .product {
   box-shadow: 0 5px 5px;
+  height: 500px;
+  width: 400px;
 }
 
 .products-cards img {
@@ -78,4 +80,8 @@
 
 .btn1:hover::before {
   transform: scaleX(1);
+}
+
+.empty {
+  display: none;
 }

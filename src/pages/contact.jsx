@@ -10,9 +10,18 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Check if the email is valid before submitting the form
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    }
+
+    setEmailError(""); // Clear any previous error
 
     const formData = {
       firstName,
@@ -32,6 +41,12 @@ function Contact() {
         console.error(error);
         // Handle error
       });
+  };
+
+  // Regular expression for email validation
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
   };
 
   return (
@@ -67,6 +82,7 @@ function Contact() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {emailError && <p className="error">{emailError}</p>}
               <input
                 type="text"
                 className="field"
