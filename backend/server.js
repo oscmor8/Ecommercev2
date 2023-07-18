@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json()); // Parse JSON requests
 
 const db = mysql.createConnection({
-  host: "localhost",
+  host: "ecommercev2.cvvv5evpfpze.us-east-1.rds.amazonaws.com",
   user: "devuser",
   password: "Password123",
   database: "ecommercev2",
