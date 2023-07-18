@@ -45,13 +45,13 @@ const Footer = () => {
               </a>
             </article>
           </section>
-          <section className="footer-column">
+          {/* <section className="footer-column">
             <h4>Join Our Newsletter</h4>
             <article className="newsletter">
-              {/* <input type="text"-class="inputEmail" placeholder="Email?"> */}
+            
               <button className="btnn btn1"> Send </button>
             </article>
-          </section>
+          </section> */}
         </section>
       </section>
     </footer>

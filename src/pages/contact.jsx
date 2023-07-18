@@ -16,7 +16,7 @@ function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // We define the handleSubmit function, which is called when the form is submitted. The function takes an event object as its parameter. event.preventDefault() prevents the default form submission behavior, which would cause a page reload.
+    // Called when the form is submitted. The function takes an event object as its parameter. event.preventDefault() prevents the default form submission behavior, which would cause a page reload.
 
     // Check if the email is valid before submitting the form
     if (!validateEmail(email)) {
