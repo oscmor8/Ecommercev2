@@ -5,6 +5,7 @@ import Header from "../components/header";
 import Slider from "../components/Slider";
 import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -29,7 +30,7 @@ function Home() {
             <h4 className="info">16 Cars Available</h4>
           </article>
           <article className="car-details-heading">
-            <a href="products.html">View All Charlotte Cars</a>
+            <Link to="/products">View All Charlotte Cars</Link>
           </article>
         </article>
       </section>
@@ -40,7 +41,7 @@ function Home() {
       <br />
       <br />
       <section className="background-image">
-        <img src="../images/background-img.webp" alt=""></img>
+        <img src="../images/hypercarlineup2.webp" alt=""></img>
       </section>
       <Footer />
     </>
