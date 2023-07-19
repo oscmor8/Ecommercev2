@@ -13,7 +13,7 @@ const Products = () => {
   useEffect(() => {
     // Fetch the car data from the backend API
     axios
-      .get("http://localhost:8000/cars")
+      .get("https://ecombackend-7ju3.onrender.com/cars")
       .then((response) => {
         setCars(response.data);
         setFilteredCars(response.data);
