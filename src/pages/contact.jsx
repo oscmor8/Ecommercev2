@@ -35,7 +35,7 @@ function Contact() {
     };
 
     axios
-      .post("http://localhost:8000/submit", formData)
+      .post("https://ecombackend-7ju3.onrender.com/submit", formData)
       .then((response) => {
         console.log(response.data);
         setFormSubmitted(true); // Set formSubmitted to true after successful submission

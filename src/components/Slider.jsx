@@ -28,7 +28,7 @@ function Slider() {
   useEffect(() => {
     // Fetch the car data from the backend API
     axios
-      .get("http://localhost:8000/carsid")
+      .get("https://ecombackend-7ju3.onrender.com/carsid")
       .then((response) => {
         setCars(response.data);
       })
