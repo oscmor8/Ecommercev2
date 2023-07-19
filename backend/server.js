@@ -7,20 +7,21 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Parse JSON requests
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
+  connectionLimit: 10, // Set the maximum number of connections in the pool
   host: "us-cdbr-east-06.cleardb.net",
   user: "bb1bd03098cda2",
   password: "d0adc67f",
   database: "heroku_4452ddd73aec511",
 });
 
-db.connect((error) => {
-  if (error) {
-    console.log("Error connecting to the database: ", error);
-  } else {
-    console.log("Connected to the database");
-  }
-});
+// db.connect((error) => {
+//   if (error) {
+//     console.log("Error connecting to the database: ", error);
+//   } else {
+//     console.log("Connected to the database");
+//   }
+// });
 
 app.post("/submit", (req, res) => {
   const { firstName, lastName, email, number, message } = req.body;

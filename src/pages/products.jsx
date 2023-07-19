@@ -13,7 +13,7 @@ const Products = () => {
   useEffect(() => {
     // Fetch the car data from the backend API
     axios
-      .get("https://ecombackend-7ju3.onrender.com/cars")
+      .get("https://ecombackend-7ju3.onrender.com/cars") // Add the protocol
       .then((response) => {
         setCars(response.data);
         setFilteredCars(response.data);
@@ -22,6 +22,7 @@ const Products = () => {
         console.error("Error retrieving car data: ", error);
       });
   }, []);
+  console.log("Cars:", cars);
 
   return (
     <>
