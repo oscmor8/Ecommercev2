@@ -8,10 +8,10 @@ app.use(cors());
 app.use(express.json()); // Parse JSON requests
 
 const db = mysql.createConnection({
-  host: "database-ecom.cvvv5evpfpze.us-east-1.rds.amazonaws.com",
-  user: "admin",
-  password: "password",
-  database: "ecomv2db",
+  host: "us-cdbr-east-06.cleardb.net",
+  user: "bb1bd03098cda2",
+  password: "d0adc67f",
+  database: "heroku_4452ddd73aec511",
 });
 
 db.connect((error) => {
